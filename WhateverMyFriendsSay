@@ -1,0 +1,34 @@
+@ECHO off 
+ECHO ner mert neert, mrt neer meer neer
+pause
+ECHO      o o
+ECHO      \_/
+ECHO    somthing devious is 
+ECHO    gonna happen
+@ECHO off
+cls
+:start
+ECHO.
+ECHO Keep em here
+ECHO Relese
+ECHO Goodbye
+set choice=
+set /p choice=Type the number to print text.
+if not '%choice%'=='' set choice=%choice:~0,1%
+if '%choice%'=='Keep em here' goto hello
+if '%choice%'=='Relese' goto bye
+if '%choice%'=='Goodbye' goto test
+ECHO "%choice%" is not valid, try again
+ECHO.
+goto start
+:hello
+ECHO HELLO
+goto end
+:bye
+ECHO BYE
+goto end
+:test
+ECHO TEST
+goto end
+:end
+pause
